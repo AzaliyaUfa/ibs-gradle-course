@@ -1,0 +1,21 @@
+plugins {
+    id 'java-library'
+}
+
+
+
+ext {
+    sbDevTools = '2.6.1'
+    sbStarterWeb = '2.6.1'
+    sbStarterTest = '2.6.1'
+}
+
+
+dependencies {
+    implementation "org.springframework.boot:spring-boot-starter-web:$sbStarterWeb"
+    implementation "org.springframework.boot:spring-boot-devtools:$sbDevTools"
+    implementation project(':submodule2')
+    testImplementation "org.springframework.boot:spring-boot-starter-test:$sbStarterTest"
+}
+
+description = 'submodule1'
